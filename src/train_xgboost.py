@@ -34,7 +34,9 @@ def main():
     y_prob = model.predict_proba(X_test)[:, 1]
 
     # Load original data for physics metrics
-    df = pd.read_csv("../datasets/power_system_dataset.csv").iloc[y_test.index]
+    # df = pd.read_csv("../datasets/power_system_dataset.csv").iloc[y_test.index]
+    df_full = pd.read_csv(DATASET_PATH)
+    df = df_full.iloc[y_test.index]
 
     # Metrics
     clf_metrics = classification_metrics(y_test, y_pred, y_prob)
