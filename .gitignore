@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# PyCharm
+.idea/
+
+# Data & outputs
+datasets/*.csv
+results/
+
+# OS
+.DS_Store
