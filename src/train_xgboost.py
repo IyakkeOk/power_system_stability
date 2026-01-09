@@ -9,8 +9,18 @@ from evaluation.metrics import classification_metrics, stability_physics_metrics
 
 def main():
     # Load and preprocess
+    # X_train, X_test, y_train, y_test, feature_names = load_and_preprocess_data(
+    #     "../datasets/power_system_dataset.csv"
+    # )
+    import os
+
+    DATASET_PATH = os.getenv(
+        "DATASET_PATH",
+        "../datasets/power_system_dataset.csv"  # local default
+    )
+
     X_train, X_test, y_train, y_test, feature_names = load_and_preprocess_data(
-        "../datasets/power_system_dataset.csv"
+        DATASET_PATH
     )
 
     # Build model
