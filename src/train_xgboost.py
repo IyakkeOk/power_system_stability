@@ -48,6 +48,8 @@ def main():
     }
 
     # Save results
+    os.makedirs("../results/xgboost", exist_ok=True)
+
     with open("../results/xgboost/metrics.json", "w") as f:
         json.dump(results, f, indent=4)
 
